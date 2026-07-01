@@ -1,5 +1,5 @@
-# Mock Assertions
+# Clearing & Resetting Mocks
 
-`expect(mockFn).toHaveBeenCalled()`, `toHaveBeenCalledTimes(n)`, `toHaveBeenCalledWith(arg1, arg2)`.
+`mockFn.mockClear()` (clear calls), `mockFn.mockReset()` (clear + remove implementation), `mockFn.mockRestore()` (restore original).
 
-> 📘 Next: **06-jest-configuration** – [jest.config.js / json / ts](../06-jest-configuration/01-jest-config-js-json-ts.md)
+> 📘 Next: [Mock Assertions – Call Count, Arguments](10-mock-assertions-call-count-arguments.md)

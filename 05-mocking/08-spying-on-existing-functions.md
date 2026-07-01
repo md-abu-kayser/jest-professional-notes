@@ -1,5 +1,5 @@
-# Clearing & Resetting Mocks
+# Spying on Existing Functions
 
-`mockFn.mockClear()` (clear calls), `mockFn.mockReset()` (clear + remove implementation), `mockFn.mockRestore()` (restore original).
+`jest.spyOn(object, 'method')`. Track calls without replacing.
 
-> 📘 Next: [Mock Assertions – Call Count, Arguments](10-mock-assertions-call-count-arguments.md)
+> 📘 Next: [Clearing & Resetting Mocks](09-clearing-and-resetting-mocks.md)
