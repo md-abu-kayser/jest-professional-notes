@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/md-abu-kayser/jest-professional-notes#readme",
   "devDependencies": {
+    "@types/node": "^26.1.0",
     "jest": "^30.4.2",
     "typescript": "^6.0.3"
   }
