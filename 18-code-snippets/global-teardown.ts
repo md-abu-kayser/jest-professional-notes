@@ -1,20 +1,13 @@
-import { execSync } from "child_process";
-import { writeFileSync } from "fs";
+import { rmSync, existsSync } from "fs";
 import path from "path";
 
-export default async function globalSetup(): Promise<void> {
-  console.log("🌍 Running global setup...");
+export default async function globalTeardown(): Promise<void> {
+  console.log("🧹 Running global teardown...");
 
-  process.env.API_BASE_URL = "http://localhost:9999";
+  const tempFile = path.join(__dirname, "global-setup.json");
+  if (existsSync(tempFile)) {
+    rmSync(tempFile);
+  }
 
-  const globalData = {
-    testStartTime: Date.now(),
-    apiBaseUrl: process.env.API_BASE_URL,
-  };
-  writeFileSync(
-    path.join(__dirname, "global-setup.json"),
-    JSON.stringify(globalData, null, 2),
-  );
-
-  console.log("Global setup complete.");
+  console.log("Global teardown complete.");
 }
